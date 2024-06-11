@@ -23,34 +23,6 @@ The application runs alongside a GraphQL server which should be running on http:
 ## Building the Application
 To create a production build, run:
 `npm run build`
-## Project Structure
-The project follows the standard create-react-app structure, enhanced with TypeScript, TailwindCSS, and PostCSS.
-frontend/
-├── node_modules/
-├── public/
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── hooks/
-│   ├── config/
-│   ├── App.tsx
-│   ├── index.css
-│   ├── index.tsx
-│   ├── react-app-env.d.ts
-├── .gitignore
-├── package.json
-├── postcss.config.js
-├── README.md
-├── tailwind.config.js
-├── tsconfig.json
-└── yarn.lock
-backend/
 ## Dependencies
 The project uses the following dependencies:
 
