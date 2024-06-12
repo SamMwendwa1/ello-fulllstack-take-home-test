@@ -87,7 +87,7 @@ export const Hero = () => {
           setIsDisplayed={setIsDisplayed}
         />
       )}
-      {isDisplayed && <SearchResults books={searchResults} />}
+      {isDisplayed && <SearchResults books={searchResults} setActiveComponent={setActiveComponent}/>}
       <div>
         {!isDisplayed && (
           <>

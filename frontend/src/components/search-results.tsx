@@ -1,13 +1,17 @@
-import React from "react";
+import { Dispatch, SetStateAction } from "react";
+import { Button } from "@mui/material";
+
 import { Book } from "../hooks/useGetBooks";
 import { BookCard } from "./book-card";
-import { Button } from "@mui/material";
+import { ReadingList } from "./reading-list";
+
 
 interface SearchResultsProps {
   books: Book[];
+  setActiveComponent: Dispatch<SetStateAction<"Books" | "ReadingList" | "All">>;
 }
 
-export const SearchResults = ({ books }: SearchResultsProps) => {
+export const SearchResults = ({ books, setActiveComponent }: SearchResultsProps) => {
   if (books.length === 0)
     return (
       <div className="flex items-center justify-center mt-20">
@@ -17,7 +21,10 @@ export const SearchResults = ({ books }: SearchResultsProps) => {
 
   return (
     <div className="flex flex-col gap-3 items-center">
-      <h2 className="text-3xl text-center my-7">Search Results</h2>
+      <h2 className="text-3xl text-center my-7">Search Results:</h2>
+      <Button href="/" variant="outlined">
+        Go Back
+      </Button>
       <ul className="flex flex-wrap justify-center gap-5 mb-7">
         {books.map((book: Book) => (
           <li
@@ -34,9 +41,7 @@ export const SearchResults = ({ books }: SearchResultsProps) => {
           </li>
         ))}
       </ul>
-      <Button href="/" variant="outlined">
-        Go Back
-      </Button>
+      <ReadingList setActiveComponent={setActiveComponent} />
     </div>
   );
 };
