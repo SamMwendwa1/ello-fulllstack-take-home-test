@@ -13,8 +13,16 @@ Navigate to the project directory:
 `cd frontend`
 Install the dependencies:
 `npm install`
-Running the Application
-To start the development server, run:
+
+## Running the Application
+#### Naviate to the backend:
+`cd backend`
+#### start the backend server: 
+`npm start`
+This will start the application on http://localhost:4000.
+#### Navigate to the frontend:
+`cd frontend`
+#### start the frontend application:
 ## `npm start`
 This will start the application on http://localhost:3000.
 
